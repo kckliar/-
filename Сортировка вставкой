@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+void wex()
+{
+    int n;
+    int box;
+    int a[n];
+
+    cout << "Enter size of array: " << endl;
+    cin >> n;
+    cout << "Enter your array: " << endl;
+
+    for (int p = 0; p < n; p++){
+        cin >> a[p];
+    }
+
+    for (int p = 0; p < n; p++){
+        cout << a[p] << "  ";
+    }
+
+    for (int i = 1; i < n; i++){
+        box = a[i];
+        int j = i-1;
+        while (box < a[j])
+        {
+            a[j+1] = a[j];
+            j--;
+        }
+        a[j+1]=box;
+    }
+
+    for (int p = 0; p < n; p++){
+        cout << a[p] << "  ";
+    }
+
+}
+
+
+int main ()
+{
+    wex();
+    return 0;
+}
